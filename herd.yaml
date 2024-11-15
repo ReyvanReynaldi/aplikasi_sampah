@@ -1,0 +1,9 @@
+version: "1.0"
+workers:
+  - name: python-worker
+    command: "python3 deteksi_sampah.py"
+    port: 5000
+    env:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./weights:/app/weights
